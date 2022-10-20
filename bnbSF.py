@@ -47,7 +47,7 @@ async def on_ready():
   while True:
     async with BscScan(YOUR_API_KEY) as bsc:
       num = await bsc.get_bnb_balance(address="0x4F2bC1d99C953e0053F5bb9A6855CF7A5CBe66Fa")
-      num1= int(num[:-17])
+      num1= int(num[:-18])
       numcomma=format (num1, ',d')
   
     activity = discord.Game(name= numcomma +" BNB")
